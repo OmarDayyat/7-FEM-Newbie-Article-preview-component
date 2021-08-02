@@ -1,0 +1,123 @@
+@import "variables";
+
+/*=================
+  General
+===================*/
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  background-color: $Light-Grayish-Blue;
+}
+
+body{
+  height: 100vh;
+  font-size: 13px;
+  font-family: $font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 280px;
+}
+
+h2{
+  color: $Very-Dark-Grayish-Blue;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+p{
+  color: $Desaturated-Dark-Blue;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  line-height: 1.6;
+}
+
+/*=================
+  Contianer
+===================*/
+
+.container{
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsla(0, 0%, 0%,0.1);
+}
+
+.left-col{
+  img{
+    width: 350px;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.right-col{
+  padding: 30px;
+}
+
+/*=================
+  User Info
+===================*/
+
+.user-info{
+  display: flex;
+  width: 100%;
+  position: relative;
+  p{
+    margin-left: 20px;
+    color: $Grayish-Blue;
+    span{
+      color: $Very-Dark-Grayish-Blue;
+      display: block;
+      font-weight: 700;
+      &::before{
+        content: 'share';
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .share-icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 5%;
+    top: 5%;
+    padding: 10px;
+    background-color: $Light-Grayish-Blue;    
+  }
+}
+
+
+
+
+
+/*=================
+  Attribution
+===================*/
+
+.attribution { 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+  a {
+     color: hsl(228, 45%, 44%);
+   }
+}
