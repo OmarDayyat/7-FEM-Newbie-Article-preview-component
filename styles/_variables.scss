@@ -6,3 +6,10 @@ $Grayish-Blue: hsl(212, 23%, 69%);
 $Light-Grayish-Blue: hsl(210, 46%, 95%);
 
 $font: 'Manrope', sans-serif;
+
+:export{
+  veryDarkBlue : $Very-Dark-Grayish-Blue;
+  darkBlue: $Desaturated-Dark-Blue;
+  grayBLue: $Grayish-Blue;
+  lightBlue: $Light-Grayish-Blue;
+}

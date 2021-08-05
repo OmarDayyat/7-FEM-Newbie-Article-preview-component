@@ -85,6 +85,7 @@ p{
     border-radius: 50%;
   }
   .share-btn{
+    cursor: pointer;
     position: absolute;
     background-size: 20px;
     background-position: center;
@@ -96,7 +97,7 @@ p{
     top: 5%;
     padding: 10px;
     background-color: $Light-Grayish-Blue;
-    .share-icon{//needs JavaScript in order to change background color
+    .share-icon{
       position: absolute;
       mask: url("../images/icon-share.svg");
       mask-repeat: no-repeat;
@@ -106,20 +107,33 @@ p{
       width: 21px;
       height: 17px;
       top: 25%;
-      left: 20%;   
+      left: 20%; 
     }
+    .share-icon-active{
+      background-color: white;
+    } 
     &:hover{
-      background-color: $Very-Dark-Grayish-Blue;
+      box-shadow: 0 5px 10px hsla(0, 0%, 0%,0.2);
     }  
-  }  
+  }
+  .share-btn-active{
+    background-color: $Very-Dark-Grayish-Blue; 
+  }      
 }
+
+
+
+
+/*=================
+  Social Media
+===================*/
 
 .social-media{//needs JavaScript in order to show
   opacity: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(30%,-120%);
+  transform: translate(30%,-150%);
   background-color: $Very-Dark-Grayish-Blue;
   display: flex;
   justify-content: center;
@@ -128,6 +142,20 @@ p{
   height: 40px;
   border-radius: 10px;
   padding: 0 20px;
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 90%;
+    border: 15px solid transparent;
+    border-top-color: $Very-Dark-Grayish-Blue;
+  }
+  a{
+    &:hover{
+      transform: scale(1.1);
+    }
+
+  }
   p{
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -139,6 +167,10 @@ p{
     border-radius: 0;
     margin: 0 5px;
   }
+}
+
+.social-media-show{
+  opacity: 1;
 }
 
 
