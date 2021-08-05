@@ -18,6 +18,7 @@
 
 html {
   background-color: #ecf2f8;
+  padding: 20px 20px 0 20px;
 }
 
 body {
@@ -27,7 +28,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 80px;
 }
 
 main {
@@ -218,6 +218,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
+  top: 100%;
   margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
@@ -232,20 +233,26 @@ p {
 ===================================================================*/
 @media only screen and (max-width: 1024px) {
   /*=================
-  General
-===================*/
+    General
+  ===================*/
   body {
     padding: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   h2 {
     margin-right: 0px;
+    padding: 30px 30px 0 30px;
   }
   p {
     margin-right: 0px;
+    padding: 0 30px 0 30px;
   }
   /*=================
-  Contianer
-===================*/
+    Contianer
+  ===================*/
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -254,120 +261,71 @@ p {
     width: 100%;
   }
   .container .left-col img {
-    width: 100%;
     border-radius: 10px 10px 0 0px;
   }
   .container .right-col {
-    padding: 30px 30px 0 30px;
+    padding: 0;
   }
   /*=================
-  User Info
-===================*/
+    User Info
+  ===================*/
   .user-info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    position: relative;
+    padding: 0 30px 0px 30px;
   }
   .user-info p {
-    margin-left: 20px;
-    color: #9eafc2;
-  }
-  .user-info p span {
-    color: #48556a;
-    display: block;
-    font-weight: 700;
-  }
-  .user-info img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    margin-left: 0px;
   }
   .user-info .share-btn {
-    cursor: pointer;
-    position: absolute;
-    background-size: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
     right: 5%;
-    top: 13%;
-    padding: 10px;
-    background-color: #ecf2f8;
+    top: 10%;
     z-index: 1;
   }
-  .user-info .share-btn .share-icon {
-    position: absolute;
-    -webkit-mask: url("../images/icon-share.svg");
-            mask: url("../images/icon-share.svg");
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-            mask-size: cover;
-    -webkit-mask-position: center;
-            mask-position: center;
-    background-color: #6d7f97;
-    width: 21px;
-    height: 17px;
-    top: 25%;
-    left: 20%;
-  }
-  .user-info .share-btn .share-icon-active {
-    background-color: white;
-  }
-  .user-info .share-btn:hover {
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .user-info .share-btn-active {
-    background-color: #6d7f97;
-  }
   /*=================
-  Social Media
-===================*/
+    Social Media
+  ===================*/
   .social-media {
-    opacity: 0;
-    position: absolute;
-    right: 0;
     top: 100%;
-    bottom: 0;
-    left: 0;
-    -webkit-transform: translate(-10%, -100%);
-            transform: translate(-10%, -100%);
-    background-color: #48556a;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-transform: translate(0%, -100%);
+            transform: translate(0%, -100%);
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 95vw;
+    width: 100%;
     height: 70px;
     border-radius: 0 0 10px 10px;
-    padding: 0 20px;
     z-index: -1;
   }
   .social-media::before {
     border: 0px solid transparent;
   }
   .social-media p {
-    margin: 0;
+    padding-left: 20px;
+    padding-right: 10px;
   }
   .social-media img {
     width: 20px;
     height: 20px;
-    border-radius: 0;
     margin: 0 10px;
   }
   .social-media-show {
     opacity: 1;
     z-index: 0;
+  }
+  /*=================
+    Attribution
+  ===================*/
+  .attribution {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: #3e52a3;
   }
 }
 /*# sourceMappingURL=style.css.map */
